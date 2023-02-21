@@ -1,13 +1,5 @@
-.link {
-  background-color: transparent;
-  border: 0;
-  font-size: inherit;
-  padding: 0;
-  color: inherit;
-  text-decoration: underline;
-  display: inline-flex;
+@use 'utils/link';
 
-  &:hover {
-    color: blue;
-  }
+.link {
+  @include link.style;
 }

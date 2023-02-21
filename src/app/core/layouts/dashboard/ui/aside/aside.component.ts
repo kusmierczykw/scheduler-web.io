@@ -14,9 +14,11 @@ import { MenuComponent } from '@shared/menu/ui/menu/menu.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AsideComponent {
-  readonly menu$: Observable<MenuItem[]>;
+  readonly menu$ = this.menuSource();
 
-  constructor(private readonly menuProvider: AsideMenuProviderService) {
-    this.menu$ = this.menuProvider.menu();
+  constructor(private readonly menuProvider: AsideMenuProviderService) {}
+
+  private menuSource(): Observable<MenuItem[]> {
+    return this.menuProvider.menu();
   }
 }

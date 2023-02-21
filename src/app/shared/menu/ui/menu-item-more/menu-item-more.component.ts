@@ -3,6 +3,7 @@ import {
   Component,
   forwardRef,
   Input,
+  OnInit,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuItemContentComponent } from '@shared/menu/ui/menu-item-content/menu-item-content.component';
@@ -43,6 +44,7 @@ import {
         style({
           height: 0,
           opacity: 0,
+          overflow: 'hidden',
         })
       ),
       transition('open => close', [animate('100ms')]),
@@ -50,12 +52,16 @@ import {
     ]),
   ],
 })
-export class MenuItemMoreComponent {
+export class MenuItemMoreComponent implements OnInit {
   @Input() item!: MenuItem;
 
   expanded = false;
 
   constructor(private readonly router: Router) {}
+
+  ngOnInit(): void {
+    this.expanded = this.isActiveRouterLink(this.item);
+  }
 
   handleMoreClick(): void {
     this.expanded = !this.expanded;

@@ -138,6 +138,14 @@ export class MenuItemBuilderService {
       this.requireLink();
     }
 
+    if (this.isCommand()) {
+      this.requireCommand();
+    }
+
+    if (this.isMore()) {
+      this.requireChildren();
+    }
+
     const item = new MenuItem(
       this._label!,
       this._type!,
@@ -175,6 +183,18 @@ export class MenuItemBuilderService {
   private requireLink(): void {
     if (isNil(this._link)) {
       throw new RequireMethodCallException(this.link.name);
+    }
+  }
+
+  private requireCommand(): void {
+    if (isNil(this._command)) {
+      throw new RequireMethodCallException(this.command.name);
+    }
+  }
+
+  private requireChildren(): void {
+    if (isNil(this._children)) {
+      throw new RequireMethodCallException(this.children.name);
     }
   }
 

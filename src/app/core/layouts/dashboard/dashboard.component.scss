@@ -1,6 +1,4 @@
-$main-min-height: 100vh;
-$aside-height: 100vh;
-$aside-width: 16rem;
+@use 'variables/sizes';
 
 :host {
   display: grid;
@@ -12,26 +10,35 @@ $aside-width: 16rem;
     'aside footer';
 
   header {
+    $height: sizes.$navbar-height;
+
+    height: $height;
     grid-area: header;
     position: sticky;
     top: 0;
   }
 
   aside {
+    $aside-height: 100vh;
+    $aside-width: 16rem;
+
+    width: $aside-width;
+    height: $aside-height;
     grid-area: aside;
     position: sticky;
     top: 0;
     grid-column: 1/2;
-    width: $aside-width;
     background-color: white;
     color: #495057;
   }
 
   main {
+    $main-min-height: 100vh;
+
+    min-height: $main-min-height;
     grid-area: main;
     grid-column: 2/3;
     overflow: hidden;
-    min-height: $main-min-height;
   }
 
   footer {

@@ -23,11 +23,6 @@ export class AsideMenuProviderService {
         .build(),
 
       this.builder
-        .initRouterLink(provider => provider.routerLink(Route.Root))
-        .label('Zajęcia')
-        .build(),
-
-      this.builder
         .initMore(builder => [
           builder
             .initRouterLink(provider => provider.routerLink(Route.Employees))
@@ -59,6 +54,11 @@ export class AsideMenuProviderService {
             .build(),
         ])
         .label('Media społecznościowe')
+        .build(),
+
+      this.builder
+        .initRouterLink(provider => provider.routerLink(Route.Root))
+        .label('Zajęcia')
         .build(),
     ]);
   }

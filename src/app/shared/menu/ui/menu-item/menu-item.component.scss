@@ -1,24 +1,25 @@
 .menu-item {
-  display: flex;
-  flex-direction: column;
-}
+  app-menu-item-more,
+  app-menu-item-router-link,
+  app-menu-item-command,
+  app-menu-item-link {
+    display: flex;
+    flex-direction: column;
+  }
 
-:host {
-  ::ng-deep {
-    .link {
-      padding: 0.5rem 0.75rem;
-      border-radius: 1rem;
-      text-decoration: none;
+  ::ng-deep .link {
+    padding: 0.5rem 0.75rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: inherit;
 
-      &.active {
-        color: #3b82f6;
-        font-weight: bold;
-      }
+    &.active {
+      color: #3b82f6;
+      font-weight: bold;
+    }
 
-      &:hover {
-        background-color: #f6f9fc;
-        color: #3b82f6;
-      }
+    &:hover {
+      background-color: #f6f9fc;
     }
   }
 }

@@ -1,11 +1,16 @@
 @use 'variables/sizes';
 
 :host {
-  $height: calc(100vh - #{sizes.$navbar-height});
+  .aside {
+    $height: calc(100vh - #{sizes.$navbar-height});
+    $font-size: sizes.$aside-font-size;
+    $padding: 0 sizes.$size-16 sizes.$size-16 sizes.$size-16;
 
-  height: $height;
-  display: block;
-  padding: 0 1rem 1rem;
-  overflow: auto;
-  font-size: 0.875rem;
+    height: $height;
+    font-size: $font-size;
+    padding: $padding;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
 }

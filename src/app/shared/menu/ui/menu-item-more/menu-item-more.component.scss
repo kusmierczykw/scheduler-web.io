@@ -1,6 +1,12 @@
+@use 'utils/list';
+
 .menu-item-more {
   display: flex;
   flex-direction: column;
   padding-left: 0.75rem;
-  font-size: 0.875em;
+  font-size: 0.925em;
+
+  ul {
+    @include list.reset;
+  }
 }

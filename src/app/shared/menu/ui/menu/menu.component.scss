@@ -1,0 +1,22 @@
+@use 'utils/list';
+
+:host(.inline) {
+  .menu ul {
+    display: flex;
+  }
+}
+
+:host(.block) {
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+:host {
+  .menu {
+    ul {
+      @include list.reset;
+    }
+  }
+}

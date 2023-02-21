@@ -2,10 +2,12 @@
   <app-menu-item-content [item]="item"></app-menu-item-content>
 </button>
 
-<div [@openClose]="isActive() ? 'open' : 'close'">
-  <div class="menu-item-more">
+<div class="menu-item-more" [@openClose]="expanded ? 'open' : 'close'">
+  <ul>
     <ng-container *ngFor="let item of item.children">
-      <app-menu-item [item]="item"></app-menu-item>
+      <li>
+        <app-menu-item [item]="item"></app-menu-item>
+      </li>
     </ng-container>
-  </div>
+  </ul>
 </div>

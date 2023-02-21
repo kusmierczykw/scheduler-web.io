@@ -1,0 +1,5 @@
+<div class="navbar" [class.navbar--scrolled]="isScrolledDown$ | async">
+  <ng-container *ngIf="menu$ | async as items">
+    <app-menu class="inline" [items]="items"></app-menu>
+  </ng-container>
+</div>
