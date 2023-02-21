@@ -1,0 +1,43 @@
+$main-min-height: 100vh;
+$aside-height: 100vh;
+$aside-width: 16rem;
+
+:host {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    'aside header'
+    'aside main'
+    'aside footer';
+
+  header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+  }
+
+  aside {
+    grid-area: aside;
+    position: sticky;
+    top: 0;
+    grid-column: 1/2;
+    height: $aside-height;
+    width: $aside-width;
+    background-color: white;
+    padding: 1rem;
+    font-size: 0.875rem;
+    color: #495057;
+  }
+
+  main {
+    grid-area: main;
+    grid-column: 2/3;
+    overflow: hidden;
+    min-height: $main-min-height;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+}

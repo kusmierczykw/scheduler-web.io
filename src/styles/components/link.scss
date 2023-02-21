@@ -1,0 +1,13 @@
+.link {
+  background-color: transparent;
+  border: 0;
+  font-size: inherit;
+  padding: 0;
+  color: inherit;
+  text-decoration: underline;
+  display: inline-flex;
+
+  &:hover {
+    color: blue;
+  }
+}

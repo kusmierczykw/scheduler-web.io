@@ -1,0 +1,11 @@
+<button class="link" (click)="handleMoreClick()">
+  <app-menu-item-content [item]="item"></app-menu-item-content>
+</button>
+
+<div [@openClose]="isActive(item) ? 'open' : 'closed'">
+  <div class="menu-item__children">
+    <ng-container *ngFor="let item of item.children">
+      <app-menu-item [item]="item"></app-menu-item>
+    </ng-container>
+  </div>
+</div>

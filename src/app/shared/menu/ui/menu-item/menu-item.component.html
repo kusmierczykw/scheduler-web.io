@@ -1,0 +1,19 @@
+<div class="menu-item">
+  <ng-container [ngSwitch]="true">
+    <ng-container *ngSwitchCase="item.isRouterLink()">
+      <app-menu-item-router-link [item]="item"></app-menu-item-router-link>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="item.isLink()">
+      <app-menu-item-link [item]="item"></app-menu-item-link>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="item.isCommand()">
+      <app-menu-item-command [item]="item"></app-menu-item-command>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="item.isMore()">
+      <app-menu-item-more [item]="item"></app-menu-item-more>
+    </ng-container>
+  </ng-container>
+</div>

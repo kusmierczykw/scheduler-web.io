@@ -1,0 +1,7 @@
+<div class="menu">
+  <ng-container *ngIf="items | onlyVisibleMenuItems | async as items">
+    <ng-container *ngFor="let item of items">
+      <app-menu-item [item]="item"></app-menu-item>
+    </ng-container>
+  </ng-container>
+</div>
