@@ -1,0 +1,11 @@
+@use 'variables/sizes';
+
+:host {
+  $height: sizes.$navbar-height;
+
+  height: $height;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}

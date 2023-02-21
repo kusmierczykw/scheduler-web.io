@@ -5,7 +5,7 @@ import { isNil, Nillable } from '@core/utils/nil/nillable';
 import { RequireMethodCallException } from '@shared/common/exceptions/require-method-call.exception';
 import { RouterLink } from '@core/routing/types/router-link';
 import { RouterLinkProviderService } from '@core/routing/providers/router-link-provider.service';
-import { Icon } from '@shared/icon/icon';
+import { Icon } from '@shared/icon/enums/icon';
 import { Observable, of } from 'rxjs';
 import { MenuItemCommand } from '@shared/menu/types/menu-item-command';
 

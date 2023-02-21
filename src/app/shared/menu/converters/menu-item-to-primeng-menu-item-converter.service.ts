@@ -4,7 +4,7 @@ import { MenuItem } from '@shared/menu/models/menu-item';
 import { valueOrUndefined } from '@core/utils/value-or-undefined';
 import { IconProviderService } from '@shared/icon/providers/icon-provider.service';
 import { isNil, Nillable } from '@core/utils/nil/nillable';
-import { Icon } from '@shared/icon/icon';
+import { Icon } from '@shared/icon/enums/icon';
 
 @Injectable({
   providedIn: 'root',

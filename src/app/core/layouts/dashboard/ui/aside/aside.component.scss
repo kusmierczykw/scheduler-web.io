@@ -1,0 +1,11 @@
+@use 'variables/sizes';
+
+:host {
+  $height: calc(100vh - #{sizes.$navbar-height});
+
+  height: $height;
+  display: block;
+  padding: 0 1rem 1rem;
+  overflow: auto;
+  font-size: 0.875rem;
+}

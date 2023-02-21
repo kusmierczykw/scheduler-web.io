@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ImageUrlPipe } from '@shared/image/pipes/image-url.pipe';
-import { Image } from '@shared/image/image';
+import { Image } from '@shared/image/enums/image';
 
 @Component({
   selector: 'app-image',

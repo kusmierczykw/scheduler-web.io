@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Image } from '@shared/image/image';
+import { Image } from '@shared/image/enums/image';
 import { isNil } from '@core/utils/nil/nillable';
 import { ImageEntryNotFoundException } from '@shared/image/exceptions/image-entry-not-found.exception';
 
@@ -20,6 +20,6 @@ export class ImageUrlProviderService {
       throw new ImageEntryNotFoundException(key);
     }
 
-    return url;
+    return `assets/images/${url}`;
   }
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Icon } from '@shared/icon/icon';
+import { Icon } from '@shared/icon/enums/icon';
 import { isNil } from '@core/utils/nil/nillable';
 import { IconEntryNotFoundException } from '@shared/icon/exceptions/icon-entry-not-found.exception';
 

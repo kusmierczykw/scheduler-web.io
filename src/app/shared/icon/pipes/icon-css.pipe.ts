@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Icon } from '@shared/icon/icon';
+import { Icon } from '@shared/icon/enums/icon';
 import { IconProviderService } from '@shared/icon/providers/icon-provider.service';
 
 @Pipe({

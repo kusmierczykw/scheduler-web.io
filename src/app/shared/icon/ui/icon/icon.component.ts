@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Icon } from '@shared/icon/icon';
+import { Icon } from '@shared/icon/enums/icon';
 import { IconCssPipe } from '@shared/icon/pipes/icon-css.pipe';
 
 @Component({
