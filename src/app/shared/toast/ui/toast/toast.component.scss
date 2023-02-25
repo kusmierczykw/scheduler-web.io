@@ -1,0 +1,37 @@
+@use 'variables/sizes';
+
+:host ::ng-deep {
+  .p-toast-top-right {
+    right: sizes.$size-32;
+  }
+
+  .p-toast {
+    $summary-font-size: sizes.$size-14;
+    $detail-font-size: sizes.$size-14;
+    $close-icon-font-size: sizes.$size-14;
+
+    .p-toast-message {
+      .p-toast-message-content {
+        .p-toast-message-text {
+          margin-left: 0;
+        }
+
+        .p-toast-message-icon {
+          display: none;
+        }
+
+        .p-toast-summary {
+          font-size: $summary-font-size;
+        }
+
+        .p-toast-detail {
+          font-size: $detail-font-size;
+        }
+
+        .p-toast-icon-close .pi {
+          font-size: $close-icon-font-size;
+        }
+      }
+    }
+  }
+}

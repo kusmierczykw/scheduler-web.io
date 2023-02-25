@@ -4,7 +4,7 @@
   .aside {
     $height: calc(100vh - #{sizes.$navbar-height});
     $font-size: sizes.$aside-font-size;
-    $padding: 0 sizes.$size-16 sizes.$size-16 sizes.$size-16;
+    $padding: sizes.$size-16;
 
     height: $height;
     font-size: $font-size;

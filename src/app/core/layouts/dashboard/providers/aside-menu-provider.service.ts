@@ -13,52 +13,13 @@ export class AsideMenuProviderService {
   menu(): Observable<MenuItem[]> {
     return of([
       this.builder
-        .initCommand(() => alert('Alert test'))
-        .label('Alert')
-        .build(),
-
-      this.builder
         .initRouterLink(provider => provider.routerLink(Route.Employees))
         .label('Pracownicy')
         .build(),
 
       this.builder
-        .initMore(builder => [
-          builder
-            .initRouterLink(provider => provider.routerLink(Route.Employees))
-            .label('Zajęcia')
-            .build(),
-
-          builder
-            .initRouterLink(provider => provider.routerLink(Route.Root))
-            .label('Zajęcia')
-            .build(),
-
-          builder
-            .initMore(builder => [
-              builder
-                .initRouterLink(provider =>
-                  provider.routerLink(Route.Employees)
-                )
-                .label('Zajęcia')
-                .build(),
-
-              builder
-                .initRouterLink(provider =>
-                  provider.routerLink(Route.Employees)
-                )
-                .label('Zajęcia')
-                .build(),
-            ])
-            .label('Zajęcia 2')
-            .build(),
-        ])
-        .label('Media społecznościowe')
-        .build(),
-
-      this.builder
-        .initRouterLink(provider => provider.routerLink(Route.Root))
-        .label('Zajęcia')
+        .initRouterLink(provider => provider.routerLink(Route.Schedule))
+        .label('Grafik zajęć')
         .build(),
     ]);
   }

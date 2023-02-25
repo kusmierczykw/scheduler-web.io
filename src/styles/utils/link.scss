@@ -7,6 +7,9 @@
   text-decoration: underline;
   display: inline-flex;
 
+  &:focus-visible {
+  }
+
   &:hover {
     color: blue;
   }

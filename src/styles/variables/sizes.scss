@@ -1,6 +1,8 @@
-$navbar-height: 4rem;
-$navbar-font-size: 0.875rem;
-
-$aside-font-size: 0.875rem;
-
+$size-14: 0.875rem;
 $size-16: 1rem;
+$size-32: 2rem;
+
+$navbar-height: 5rem;
+$navbar-font-size: $size-14;
+
+$aside-font-size: $size-14;

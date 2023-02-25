@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ToastComponent } from '@shared/toast/ui/toast/toast.component';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,6 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.scss'],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, ToastComponent],
 })
 export class AppComponent {}

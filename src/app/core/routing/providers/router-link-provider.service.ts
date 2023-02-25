@@ -17,6 +17,7 @@ export class RouterLinkProviderService {
   private readonly entries = new Map<Route, RouterLinkWithParams>([
     [Route.Root, [RouteFragment.Root]],
     [Route.Employees, [RouteFragment.Root, RouteFragment.Employees]],
+    [Route.Schedule, [RouteFragment.Root, RouteFragment.Schedule]],
   ]);
 
   routerLink(
