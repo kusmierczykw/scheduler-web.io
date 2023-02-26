@@ -1,20 +1,28 @@
+@use 'variables/sizes';
+
 :host {
   .form-control {
     display: flex;
     flex-direction: column;
 
     &__input {
+      $margin: sizes.$size-8;
+
       display: flex;
       flex-direction: column;
-      margin-bottom: 0.25rem;
+      margin-bottom: $margin;
     }
 
     &__label {
-      margin-bottom: 0.25rem;
+      $margin: sizes.$size-4;
+
+      margin-bottom: $margin;
     }
 
     &__errors {
-      margin-top: 0.5rem;
+      $margin: sizes.$size-8;
+
+      margin-top: $margin;
     }
   }
 }

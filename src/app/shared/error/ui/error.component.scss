@@ -1,5 +1,9 @@
 @use 'variables/colors';
 
 :host {
-  color: colors.$danger;
+  .error {
+    $text-color: colors.$danger;
+
+    color: $text-color;
+  }
 }

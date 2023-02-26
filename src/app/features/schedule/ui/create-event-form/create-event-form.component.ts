@@ -42,14 +42,16 @@ export class CreateEventFormComponent implements OnChanges {
 
   /* prettier-ignore */
   readonly form = this.builder.group({
-    therapists: this.builder.nonNullable.control<Uuid[]>([], [Validators.required]),
+    therapists: this.builder.nonNullable.control<Uuid[]>([]),
     shortTitle: this.builder.nonNullable.control('', [Validators.required, Validators.maxLength(100)]),
   });
 
   constructor(private readonly builder: FormBuilder) {}
 
   handleSubmit(): void {
-    this.submitClickEvent.emit(new CreateEventFormData());
+    const { therapists, shortTitle } = this.form.getRawValue();
+
+    this.submitClickEvent.emit(new CreateEventFormData(therapists, shortTitle));
   }
 
   ngOnChanges(changes: SimpleChanges): void {

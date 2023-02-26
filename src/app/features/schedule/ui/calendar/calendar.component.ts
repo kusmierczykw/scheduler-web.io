@@ -17,6 +17,7 @@ import { CalendarOption } from '@fullcalendar/angular/private-types';
 import { CreateEventDialogComponent } from '@features/schedule/ui/create-event-dialog/create-event-dialog.component';
 import { CreateEventDialogService } from '@features/schedule/ui/create-event-dialog/services/create-event-dialog.service';
 import { CreateEventDialogInput } from '@features/schedule/ui/create-event-dialog/models/create-event-dialog-input';
+import { isNil } from '@core/utils/nil/nillable';
 
 @Component({
   selector: 'app-calendar',
@@ -56,7 +57,22 @@ export class CalendarComponent {
     unselectAuto: false,
     select: ({ start, end, resource }) => {
       this.addEventDialog.show(new CreateEventDialogInput()).subscribe({
-        next: () => this.calendar.getApi().unselect(),
+        next: output => {
+          this.calendar.getApi().unselect();
+
+          if (isNil(output)) {
+            return;
+          }
+
+          const { data } = output;
+
+          this.calendar.getApi().addEvent({
+            start: start,
+            end: end,
+            resourceId: resource?.id,
+            title: data.shortTitle,
+          });
+        },
       });
     },
     eventContent: ({ event }) => {
