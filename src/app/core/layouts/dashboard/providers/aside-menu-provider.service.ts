@@ -18,6 +18,11 @@ export class AsideMenuProviderService {
         .build(),
 
       this.builder
+        .initRouterLink(provider => provider.routerLink(Route.Employees))
+        .label('Sale zajęciowe')
+        .build(),
+
+      this.builder
         .initRouterLink(provider => provider.routerLink(Route.Schedule))
         .label('Grafik zajęć')
         .build(),

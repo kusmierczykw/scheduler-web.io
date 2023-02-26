@@ -1,0 +1,5 @@
+@use 'variables/sizes';
+
+:host {
+  font-size: sizes.$size-12;
+}

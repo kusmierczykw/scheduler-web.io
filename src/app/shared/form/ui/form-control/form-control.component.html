@@ -1,0 +1,13 @@
+<div class="form-control">
+  <label class="form-control__label" [for]="inputId">{{ label }}</label>
+
+  <div class="form-control__input">
+    <ng-content></ng-content>
+  </div>
+
+  <ng-container *ngIf="errors">
+    <div class="form-control__errors">
+      <app-form-control-errors [errors]="errors"></app-form-control-errors>
+    </div>
+  </ng-container>
+</div>

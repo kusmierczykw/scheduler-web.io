@@ -1,0 +1,11 @@
+:host {
+  ::ng-deep {
+    .fc .fc-timegrid-col.fc-day-today {
+      background-color: unset;
+    }
+
+    .fc.fc-theme-standard .fc-highlight {
+      background: var(--fc-highlight-color);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<p-dialog
+  appDefaultDialog
+  appCustomCloseEvent
+  header="Tworzenie wpisu"
+  [customCloseEvent]="customCloseEvent"
+  [(visible)]="visible">
+  <ng-container *ngIf="visible">
+    <app-add-event-form
+      (submitClickEvent)="handleSubmitClick($event)"
+      (cancelClickEvent)="handleCancelClick()">
+    </app-add-event-form>
+  </ng-container>
+</p-dialog>

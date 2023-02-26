@@ -1,0 +1,5 @@
+@use 'variables/colors';
+
+:host {
+  color: colors.$danger;
+}
