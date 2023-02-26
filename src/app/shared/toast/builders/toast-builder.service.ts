@@ -14,6 +14,10 @@ export class ToastBuilderService {
   private _immortal: Nillable<boolean>;
   private _life: Nillable<number>;
 
+  constructor() {
+    this.reset();
+  }
+
   initSuccess(message: string): this {
     return this.message(message).title('Sukces').severity('success');
   }
@@ -60,6 +64,16 @@ export class ToastBuilderService {
     return this;
   }
 
+  reset(): this {
+    this._severity = null;
+    this._message = null;
+    this._title = null;
+    this._immortal = null;
+    this._life = null;
+
+    return this;
+  }
+
   build(): Toast {
     this.requireTitle();
     this.requireMessage();
@@ -68,13 +82,17 @@ export class ToastBuilderService {
     this.configureDefaultImmortality();
     this.configureDefaultLife();
 
-    return new Toast(
+    const toast = new Toast(
       this._title!,
       this._message!,
       this._severity!,
       this._immortal!,
       this._life!
     );
+
+    this.reset();
+
+    return toast;
   }
 
   private requireMessage(): void {

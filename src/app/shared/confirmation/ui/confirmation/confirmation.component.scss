@@ -1,0 +1,26 @@
+@use 'variables/sizes';
+
+:host {
+  ::ng-deep {
+    .p-dialog.p-confirm-dialog {
+      .p-confirm-dialog-message {
+        margin-left: 0;
+      }
+
+      .p-button {
+        margin: 0;
+        .p-button-icon-left {
+          display: none;
+        }
+      }
+
+      .p-dialog-footer {
+        $gap: sizes.$size-16;
+
+        gap: $gap;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
