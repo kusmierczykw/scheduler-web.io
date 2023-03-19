@@ -2,27 +2,38 @@
 
 :host {
   .form-control {
+    $margin: sizes.$size-12;
+
     display: flex;
     flex-direction: column;
+    margin-bottom: $margin;
 
     &__input {
-      $margin: sizes.$size-16;
+      $margin: sizes.$size-4;
 
+      margin-bottom: $margin;
       display: flex;
       flex-direction: column;
-      margin-bottom: $margin;
     }
 
     &__label {
       $margin: sizes.$size-4;
+      $font-size: sizes.$size-14;
 
       margin-bottom: $margin;
+      font-size: $font-size;
+    }
+
+    &__hint {
+      $font-size: sizes.$size-12;
+
+      font-size: $font-size;
     }
 
     &__errors {
-      $margin: -#{sizes.$size-14};
+      $font-size: sizes.$size-12;
 
-      margin-top: $margin;
+      font-size: $font-size;
     }
   }
 }

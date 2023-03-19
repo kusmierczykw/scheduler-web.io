@@ -1,5 +1,5 @@
 import {
-  AfterContentInit,
+  AfterViewInit,
   Component,
   ContentChild,
   ElementRef,
@@ -12,17 +12,19 @@ import { isNil, Nillable } from '@core/utils/nil/nillable';
 import { ControlReferenceNotFoundException } from '@shared/form/exceptions/control-reference-not-found.exception';
 import { FormControlErrorsComponent } from '@shared/form/components/form-control-error/form-control-errors.component';
 import { Subject } from 'rxjs';
+import { HintComponent } from '@shared/hint/components/hint/hint.component';
 
 @Component({
   selector: 'app-form-control',
   standalone: true,
-  imports: [CommonModule, FormControlErrorsComponent],
+  imports: [CommonModule, FormControlErrorsComponent, HintComponent],
   templateUrl: './form-control.component.html',
   styleUrls: ['./form-control.component.scss'],
 })
-export class FormControlComponent implements AfterContentInit, OnDestroy {
+export class FormControlComponent implements AfterViewInit, OnDestroy {
   private static attributeId = 0;
 
+  @Input() hint?: Nillable<string>;
   @Input() label!: string;
   @Input() placeholder!: string;
   @Input() inputId: string = this.attributeId;
@@ -47,7 +49,7 @@ export class FormControlComponent implements AfterContentInit, OnDestroy {
     return `from-control-${FormControlComponent.attributeId}`;
   }
 
-  ngAfterContentInit(): void {
+  ngAfterViewInit(): void {
     this.requireFromControlReference();
     this.appendAttributeIdToHTMLInput();
   }

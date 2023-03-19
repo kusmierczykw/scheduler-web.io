@@ -4,7 +4,9 @@
   </app-form-control>
 
   <app-form-control label="Terapeuci">
-    <p-dropdown appDefaultDropdown [formControl]="form.controls.therapists" />
+    <p-multiSelect
+      appDefaultMultiSelect
+      [formControl]="form.controls.therapists" />
   </app-form-control>
 
   <div appFormActionsContainer>

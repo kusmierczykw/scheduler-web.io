@@ -1,3 +1,5 @@
 export enum EmployeeType {
-  Therapist,
+  Psychiatrist,
+  Psychologist,
+  Neurologist,
 }

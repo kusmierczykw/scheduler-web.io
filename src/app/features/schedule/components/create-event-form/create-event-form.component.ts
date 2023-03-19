@@ -20,11 +20,11 @@ import { CreateEventFormData } from '@features/schedule/components/create-event-
 import { Uuid } from '@core/common/types/uuid';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormControlComponent } from '@shared/form/components/form-control/form-control.component';
-import { DropdownModule } from 'primeng/dropdown';
-import { DefaultDropdownDirective } from '@shared/form/directives/default-dropdown.directive';
 import { CreateEventForm } from '@features/schedule/components/create-event-form/types/create-event-form';
 import { ButtonSmallDirective } from '@shared/button/directives/button-small.directive';
 import { FormActionsContainerDirective } from '@shared/form/directives/form-actions-container.directive';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { DefaultMultiSelectDirective } from '@shared/multi-select/directives/default-multi-select.directive';
 
 @Component({
   selector: 'app-add-event-form',
@@ -35,10 +35,10 @@ import { FormActionsContainerDirective } from '@shared/form/directives/form-acti
     ReactiveFormsModule,
     InputTextModule,
     FormControlComponent,
-    DropdownModule,
-    DefaultDropdownDirective,
     ButtonSmallDirective,
     FormActionsContainerDirective,
+    MultiSelectModule,
+    DefaultMultiSelectDirective,
   ],
   templateUrl: './create-event-form.component.html',
   styleUrls: ['./create-event-form.component.scss'],

@@ -17,7 +17,7 @@ export class BottomSheetDialogDirective {
     this.dialog.style = {
       ...this.dialog.style,
       width: '100vw',
-      margin: '0 2rem',
+      margin: '0 1rem',
     };
   }
 }

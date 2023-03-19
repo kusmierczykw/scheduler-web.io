@@ -10,7 +10,9 @@ import { EmployeeTypeNotFoundException } from '@features/employee/components/emp
 })
 export class EmployeeTypeProviderService {
   private readonly entries = new Map<EmployeeType, string>([
-    [EmployeeType.Therapist, 'Terapeuta'],
+    [EmployeeType.Psychiatrist, 'Lekarz psychiatra'],
+    [EmployeeType.Neurologist, 'Neurologopeda'],
+    [EmployeeType.Psychologist, 'Psycholog'],
   ]);
 
   selectItems(): Observable<SelectItem<EmployeeType>[]> {

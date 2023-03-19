@@ -20,7 +20,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { FormActionsContainerDirective } from '@shared/form/directives/form-actions-container.directive';
 import { emailValidator } from '@shared/form/validators/email-validator';
 import { DropdownModule } from 'primeng/dropdown';
-import { DefaultDropdownDirective } from '@shared/form/directives/default-dropdown.directive';
+import { DefaultDropdownDirective } from '@shared/dropdown/directives/default-dropdown.directive';
 import { EmployeeType } from '@features/employee/components/employee-type/enums/employee-type';
 import { EmployeeTypeProviderService } from '@features/employee/components/employee-type/providers/employee-type-provider.service';
 import { Observable } from 'rxjs';
@@ -60,10 +60,10 @@ export class CreateEmployeeFormComponent {
   }
 
   handleSubmitClick(): void {
-    const { firstName, lastName, email } = this.form.getRawValue();
+    const { firstName, lastName, email, phone } = this.form.getRawValue();
 
     this.submitClickEvent.emit(
-      new CreateEmployeeFormData(firstName, lastName, email)
+      new CreateEmployeeFormData(firstName, lastName, email, phone)
     );
   }
 
@@ -79,9 +79,10 @@ export class CreateEmployeeFormComponent {
         Validators.required,
         emailValidator(),
       ]),
-      type: this.builder.nonNullable.control(EmployeeType.Therapist, [
+      type: this.builder.nonNullable.control(EmployeeType.Psychologist, [
         Validators.required,
       ]),
+      phone: this.builder.nonNullable.control('', [Validators.required]),
     });
   }
 

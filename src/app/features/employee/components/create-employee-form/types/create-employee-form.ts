@@ -6,4 +6,5 @@ export type CreateEmployeeForm = {
   lastName: FormControl<string>;
   email: FormControl<string>;
   type: FormControl<EmployeeType>;
+  phone: FormControl<string>;
 };

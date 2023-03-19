@@ -16,5 +16,6 @@ export class DefaultDropdownDirective {
     this.dropdown.placeholder = 'Wybierz wartość';
     this.dropdown.emptyFilterMessage = 'Brak danych do wyświetlenia';
     this.dropdown.emptyMessage = 'Brak danych do wyświetlenia';
+    this.dropdown.showClear = true;
   }
 }

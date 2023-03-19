@@ -1,31 +1,39 @@
 <form [formGroup]="form" (ngSubmit)="handleSubmitClick()">
-  <app-form-control>
+  <app-form-control label="Imię">
     <input
       pInputText
-      placeholder="Imię"
+      placeholder="Wprowadź wartość"
       [formControl]="form.controls.firstName" />
   </app-form-control>
 
-  <app-form-control>
+  <app-form-control label="Nazwisko">
     <input
       pInputText
-      placeholder="Nazwisko"
+      placeholder="Wprowadź wartość"
       [formControl]="form.controls.lastName" />
   </app-form-control>
 
-  <app-form-control>
+  <app-form-control label="Adres e-mail">
     <input
       pInputText
       type="email"
-      placeholder="Adres e-mail"
+      placeholder="Wprowadź wartość"
       [formControl]="form.controls.email" />
   </app-form-control>
 
+  <app-form-control label="Numer telefonu">
+    <input
+      pInputText
+      type="tel"
+      placeholder="Wprowadź wartość"
+      [formControl]="form.controls.phone" />
+  </app-form-control>
+
   <ng-container *ngIf="therapistTypes$ | async as types">
-    <app-form-control>
+    <app-form-control label="Rodzaj pracownika">
       <p-dropdown
         appDefaultDropdown
-        placeholder="Rodzaj"
+        placeholder="Wybierz wartość"
         [options]="types"
         [formControl]="form.controls.type">
       </p-dropdown>

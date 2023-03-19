@@ -5,6 +5,12 @@
     <ng-content></ng-content>
   </div>
 
+  <ng-container *ngIf="hint">
+    <div class="form-control__hint">
+      <app-hint [hint]="hint"></app-hint>
+    </div>
+  </ng-container>
+
   <ng-container *ngIf="errors">
     <div class="form-control__errors">
       <app-form-control-errors [errors]="errors"></app-form-control-errors>

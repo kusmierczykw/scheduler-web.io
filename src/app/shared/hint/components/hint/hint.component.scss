@@ -1,8 +1,8 @@
 @use 'variables/colors';
 
 :host {
-  .error {
-    $text-color: colors.$danger;
+  .hint {
+    $text-color: colors.$dark-500;
 
     color: $text-color;
   }
