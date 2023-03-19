@@ -1,0 +1,5 @@
+@use 'utils/primeng/button';
+
+a.p-button {
+  @include button.link-content($background-color-hover: #2563eb);
+}

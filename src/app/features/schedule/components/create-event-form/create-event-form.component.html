@@ -1,0 +1,26 @@
+<form [formGroup]="form" (ngSubmit)="handleSubmitClick()">
+  <app-form-control label="Skrócona nazwa">
+    <input pInputText [formControl]="form.controls.shortTitle" />
+  </app-form-control>
+
+  <app-form-control label="Terapeuci">
+    <p-dropdown appDefaultDropdown [formControl]="form.controls.therapists" />
+  </app-form-control>
+
+  <div appFormActionsContainer>
+    <button
+      pButton
+      appButtonSmall
+      type="button"
+      class="p-button-outlined"
+      label="Anuluj"
+      (click)="handleCancelClick()"></button>
+
+    <button
+      pButton
+      appButtonSmall
+      type="submit"
+      label="Dodaj"
+      [disabled]="form.invalid"></button>
+  </div>
+</form>

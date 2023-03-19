@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CalendarComponent } from '@features/schedule/ui/calendar/calendar.component';
+import { CalendarComponent } from '@features/schedule/components/calendar/calendar.component';
 
 @Component({
   selector: 'app-schedule-page',

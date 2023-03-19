@@ -1,0 +1,11 @@
+<p-dialog
+  appBottomSheetDialog
+  appCustomCloseEvent
+  header="Utwórz pracownika"
+  [customCloseEvent]="customCloseEvent"
+  [visible]="true">
+  <app-create-employee-form
+    (submitClickEvent)="handleSubmitClickEvent()"
+    (cancelClickEvent)="handleCancelClickEvent()">
+  </app-create-employee-form>
+</p-dialog>

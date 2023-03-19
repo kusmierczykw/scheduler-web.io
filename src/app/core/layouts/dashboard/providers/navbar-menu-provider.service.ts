@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { MenuItem } from '@shared/menu/models/menu-item';
 import { MenuItemBuilderService } from '@shared/menu/builders/menu-item-builder.service';
-import { Route } from '@core/routing/enums/route';
 import { ToastService } from '@shared/toast/services/toast.service';
 
 @Injectable({
@@ -26,7 +25,11 @@ export class NavbarMenuProviderService {
         .build(),
 
       this.builder
-        .initRouterLink(provider => provider.routerLink(Route.Employees))
+        .initCommand(() => {
+          this.toast.show(builder =>
+            builder.initWarning('Ta funkcja jest w trakcie realizacji.').build()
+          );
+        })
         .label('Wyloguj')
         .build(),
     ]);

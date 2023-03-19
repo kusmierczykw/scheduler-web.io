@@ -1,0 +1,9 @@
+@use '../../../../../styles/variables/colors';
+
+:host {
+  .error {
+    $text-color: colors.$danger;
+
+    color: $text-color;
+  }
+}

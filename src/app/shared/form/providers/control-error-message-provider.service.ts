@@ -13,6 +13,7 @@ export class ControlErrorMessageProviderService {
     [ValidationError.Required, (): string => 'To pole jest wymagane.'],
     [ValidationError.MinLength, (params): string => `To pole powinno zawierać przynajmniej ${params?.requiredLength} znaków.`],
     [ValidationError.MaxLength, (params): string => `To pole powinno zawierać maksymalnie ${params?.requiredLength} znaków.`],
+    [ValidationError.Email, (): string => `Adres email jest niepoprawny.`],
   ]);
 
   message(

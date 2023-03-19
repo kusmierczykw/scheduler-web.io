@@ -13,6 +13,7 @@ export class DefaultDialogDirective {
   private configureDefaultDialog(): void {
     this.dialog.draggable = false;
     this.dialog.maximizable = false;
+    this.dialog.resizable = false;
     this.dialog.modal = true;
     this.dialog.closeOnEscape = false;
     this.dialog.style = { ...this.dialog.style, width: '40rem' };

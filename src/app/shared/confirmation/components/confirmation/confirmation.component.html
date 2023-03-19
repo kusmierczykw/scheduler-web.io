@@ -1,0 +1,18 @@
+<p-confirmDialog #confirmation [style]="{ width: '30rem' }">
+  <ng-template pTemplate="footer">
+    <button
+      pButton
+      appButtonSmall
+      type="button"
+      class="p-button-outlined"
+      [label]="rejectLabel"
+      (click)="confirmation.reject()"></button>
+
+    <button
+      pButton
+      appButtonSmall
+      type="button"
+      [label]="acceptLabel"
+      (click)="confirmation.accept()"></button>
+  </ng-template>
+</p-confirmDialog>

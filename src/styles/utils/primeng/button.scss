@@ -1,0 +1,10 @@
+@mixin link-content($background-color-hover, $text-color-hover: white) {
+  &:not(.p-button-link) {
+    text-decoration: none;
+
+    &:hover {
+      background-color: $background-color-hover;
+      color: $text-color-hover;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ToastComponent } from '@shared/toast/ui/toast/toast.component';
-import { ConfirmationComponent } from '@shared/confirmation/ui/confirmation/confirmation.component';
+import { ToastComponent } from '@shared/toast/components/toast/toast.component';
+import { ConfirmationComponent } from '@shared/confirmation/components/confirmation/confirmation.component';
 
 @Component({
   selector: 'app-root',

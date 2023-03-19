@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { isNil, Nillable } from '@core/utils/nil/nillable';
 import { Confirmation } from '@shared/confirmation/models/confirmation';
-import { EmptyFunction } from '@core/utils/empty/empty-function';
+import { EmptyFunction } from '@core/utils/function/empty-function';
 import { RequireMethodCallException } from '@shared/common/exceptions/require-method-call.exception';
 
 @Injectable({
@@ -114,7 +114,7 @@ export class ConfirmationBuilderService {
 
   private configureDefaultRejectLabel(): void {
     if (isNil(this._rejectLabel)) {
-      this.acceptLabel('Nie');
+      this.rejectLabel('Nie');
     }
   }
 

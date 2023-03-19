@@ -16,6 +16,10 @@ import { RouteParamNotFound } from '@core/routing/exceptions/route-param-not-fou
 export class RouterLinkProviderService {
   private readonly entries = new Map<Route, RouterLinkWithParams>([
     [Route.Root, [RouteFragment.Root]],
+    [
+      Route.CreateEmployee,
+      [RouteFragment.Root, RouteFragment.Employees, RouteFragment.Create],
+    ],
     [Route.Employees, [RouteFragment.Root, RouteFragment.Employees]],
     [Route.Schedule, [RouteFragment.Root, RouteFragment.Schedule]],
   ]);

@@ -6,7 +6,7 @@ export const routes: Routes = [
     path: '',
     loadComponent: () =>
       import('@core/layouts/dashboard/dashboard.component').then(
-        ({ DashboardComponent }) => DashboardComponent
+        c => c.DashboardComponent
       ),
     children: [
       {
@@ -14,7 +14,23 @@ export const routes: Routes = [
         loadComponent: () =>
           import(
             '@features/schedule/pages/schedule-page/schedule-page.component'
-          ).then(({ SchedulePageComponent }) => SchedulePageComponent),
+          ).then(c => c.SchedulePageComponent),
+      },
+      {
+        path: RouteFragment.Employees,
+        loadComponent: () =>
+          import(
+            '@features/employee/pages/employees-page/employees-page.component'
+          ).then(c => c.EmployeesPageComponent),
+        children: [
+          {
+            path: RouteFragment.Create,
+            loadComponent: () =>
+              import(
+                '@features/employee/pages/create-employee-page/create-employee-page.component'
+              ).then(c => c.CreateEmployeePageComponent),
+          },
+        ],
       },
     ],
   },
