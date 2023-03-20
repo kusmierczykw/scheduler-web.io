@@ -1,5 +1,11 @@
 <div class="form-control">
-  <label class="form-control__label" [for]="inputId">{{ label }}</label>
+  <div class="form-control__label">
+    <label [for]="inputId">{{ label }}</label>
+
+    <ng-container *ngIf="hasRequiredValidator">
+      <span class="form-control__required">*</span>
+    </ng-container>
+  </div>
 
   <div class="form-control__input">
     <ng-content></ng-content>

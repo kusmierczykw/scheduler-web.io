@@ -10,8 +10,8 @@ import {
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import {
-  FormBuilder,
   FormGroup,
+  NonNullableFormBuilder,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
@@ -52,7 +52,7 @@ export class CreateEventFormComponent implements OnChanges {
 
   readonly form: FormGroup<CreateEventForm>;
 
-  constructor(private readonly builder: FormBuilder) {
+  constructor(private readonly builder: NonNullableFormBuilder) {
     this.form = this.createForm();
   }
 
@@ -79,8 +79,8 @@ export class CreateEventFormComponent implements OnChanges {
 
   private createForm(): FormGroup<CreateEventForm> {
     return this.builder.group({
-      therapists: this.builder.nonNullable.control<Uuid[]>([]),
-      shortTitle: this.builder.nonNullable.control('', [
+      therapists: this.builder.control<Uuid[]>([]),
+      shortTitle: this.builder.control('', [
         Validators.required,
         Validators.maxLength(100),
       ]),

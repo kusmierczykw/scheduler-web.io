@@ -1,4 +1,5 @@
 @use 'variables/sizes';
+@use 'variables/colors';
 
 :host {
   .form-control {
@@ -22,6 +23,14 @@
 
       margin-bottom: $margin;
       font-size: $font-size;
+    }
+
+    &__required {
+      $margin: sizes.$size-2;
+      $text-color: colors.$danger;
+
+      color: $text-color;
+      padding-left: $margin;
     }
 
     &__hint {

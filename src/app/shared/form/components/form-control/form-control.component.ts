@@ -7,7 +7,7 @@ import {
   OnDestroy,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgControl, ValidationErrors } from '@angular/forms';
+import { NgControl, ValidationErrors, Validators } from '@angular/forms';
 import { isNil, Nillable } from '@core/utils/nil/nillable';
 import { ControlReferenceNotFoundException } from '@shared/form/exceptions/control-reference-not-found.exception';
 import { FormControlErrorsComponent } from '@shared/form/components/form-control-error/form-control-errors.component';
@@ -35,6 +35,10 @@ export class FormControlComponent implements AfterViewInit, OnDestroy {
 
   constructor(private readonly elementRef: ElementRef) {
     this.incrementAttributeId();
+  }
+
+  get hasRequiredValidator(): boolean {
+    return !!this.ngControl.control?.hasValidator(Validators.required);
   }
 
   get errors(): Nillable<ValidationErrors> {

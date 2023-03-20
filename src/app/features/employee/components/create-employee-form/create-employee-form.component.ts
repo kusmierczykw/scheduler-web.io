@@ -6,8 +6,8 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
-  FormBuilder,
   FormGroup,
+  NonNullableFormBuilder,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
@@ -52,7 +52,7 @@ export class CreateEmployeeFormComponent {
   therapistTypes$: Observable<SelectItem<EmployeeType>[]>;
 
   constructor(
-    private readonly builder: FormBuilder,
+    private readonly builder: NonNullableFormBuilder,
     private readonly provider: EmployeeTypeProviderService
   ) {
     this.therapistTypes$ = this.therapistTypesSource();
@@ -60,11 +60,7 @@ export class CreateEmployeeFormComponent {
   }
 
   handleSubmitClick(): void {
-    const { firstName, lastName, email, phone } = this.form.getRawValue();
-
-    this.submitClickEvent.emit(
-      new CreateEmployeeFormData(firstName, lastName, email, phone)
-    );
+    this.submitClickEvent.emit(this.toModel());
   }
 
   handleCancelClick(): void {
@@ -73,17 +69,20 @@ export class CreateEmployeeFormComponent {
 
   private createForm(): FormGroup<CreateEmployeeForm> {
     return this.builder.group({
-      firstName: this.builder.nonNullable.control('', [Validators.required]),
-      lastName: this.builder.nonNullable.control('', [Validators.required]),
-      email: this.builder.nonNullable.control('', [
-        Validators.required,
-        emailValidator(),
-      ]),
-      type: this.builder.nonNullable.control(EmployeeType.Psychologist, [
+      firstName: this.builder.control('', [Validators.required]),
+      lastName: this.builder.control('', [Validators.required]),
+      email: this.builder.control('', [Validators.required, emailValidator]),
+      type: this.builder.control(EmployeeType.Psychologist, [
         Validators.required,
       ]),
-      phone: this.builder.nonNullable.control('', [Validators.required]),
+      phone: this.builder.control('', [Validators.required]),
     });
+  }
+
+  private toModel(): CreateEmployeeFormData {
+    const { firstName, lastName, email, phone } = this.form.getRawValue();
+
+    return new CreateEmployeeFormData(firstName, lastName, email, phone);
   }
 
   private therapistTypesSource(): Observable<SelectItem<EmployeeType>[]> {
