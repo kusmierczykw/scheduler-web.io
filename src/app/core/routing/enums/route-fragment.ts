@@ -3,4 +3,6 @@ export enum RouteFragment {
   Root = '/',
   Employees = 'employees',
   Schedule = 'schedule',
+  SignIn = 'sign-in',
+  SignOut = 'sign-out',
 }

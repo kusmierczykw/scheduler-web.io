@@ -3,4 +3,6 @@ export enum Route {
   Employees,
   CreateEmployee,
   Schedule,
+  SignOut,
+  SignIn,
 }

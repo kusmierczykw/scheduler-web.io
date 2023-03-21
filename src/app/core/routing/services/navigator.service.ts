@@ -13,8 +13,8 @@ export class NavigatorService {
   ) {}
 
   navigateByRouterLink(
-    factory: (provider: RouterLinkProviderService) => RouterLink
+    routerLink: (provider: RouterLinkProviderService) => RouterLink
   ): void {
-    void this.router.navigate(factory(this.routerLinkProvider));
+    void this.router.navigate(routerLink(this.routerLinkProvider));
   }
 }

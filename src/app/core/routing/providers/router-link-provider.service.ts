@@ -22,6 +22,8 @@ export class RouterLinkProviderService {
     ],
     [Route.Employees, [RouteFragment.Root, RouteFragment.Employees]],
     [Route.Schedule, [RouteFragment.Root, RouteFragment.Schedule]],
+    [Route.SignIn, [RouteFragment.Root, RouteFragment.SignIn]],
+    [Route.SignOut, [RouteFragment.Root, RouteFragment.SignOut]],
   ]);
 
   routerLink(

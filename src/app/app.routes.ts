@@ -34,4 +34,22 @@ export const routes: Routes = [
       },
     ],
   },
+  {
+    path: RouteFragment.SignOut,
+    loadComponent: () =>
+      import('@features/auth/pages/sign-out-page/sign-out-page.component').then(
+        c => c.SignOutPageComponent
+      ),
+  },
+  {
+    path: RouteFragment.SignIn,
+    loadComponent: () =>
+      import('@features/auth/pages/sign-in-page/sign-in-page.component').then(
+        c => c.SignInPageComponent
+      ),
+  },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];
