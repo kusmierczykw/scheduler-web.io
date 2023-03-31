@@ -20,6 +20,7 @@ export class RouterLinkProviderService {
       Route.CreateEmployee,
       [RouteFragment.Root, RouteFragment.Employees, RouteFragment.Create],
     ],
+    [Route.Config, [RouteFragment.Root, RouteFragment.Config]],
     [Route.Employees, [RouteFragment.Root, RouteFragment.Employees]],
     [Route.Schedule, [RouteFragment.Root, RouteFragment.Schedule]],
     [Route.SignIn, [RouteFragment.Root, RouteFragment.SignIn]],

@@ -9,6 +9,8 @@ import { IconEntryNotFoundException } from '@shared/icon/exceptions/icon-entry-n
 export class IconProviderService {
   private readonly entries = new Map<Icon, string>([
     [Icon.PeopleFill, 'bi bi-people-fill'],
+    [Icon.Calendar, 'bi bi-calendar4-range'],
+    [Icon.Gear, 'bi bi-gear'],
   ]);
 
   icon(icon: Icon): string {

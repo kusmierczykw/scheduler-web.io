@@ -26,3 +26,13 @@
   box-shadow: $box-shadow;
   color: $color;
 }
+
+:host-context(.link:hover:not(.active)) {
+  $color: colors.$blue;
+  $border-color: rgba(colors.$blue, 0.1);
+  $background: rgba(colors.$blue, 0.1);
+
+  background-color: $background;
+  border-color: $border-color;
+  color: $color;
+}

@@ -22,7 +22,13 @@ export class AsideMenuProviderService {
       this.builder
         .initRouterLink(provider => provider.routerLink(Route.Schedule))
         .label('Grafik zajęć')
-        .icon(Icon.PeopleFill)
+        .icon(Icon.Calendar)
+        .build(),
+
+      this.builder
+        .initRouterLink(provider => provider.routerLink(Route.Config))
+        .label('Konfiguracja')
+        .icon(Icon.Gear)
         .build(),
     ]);
   }

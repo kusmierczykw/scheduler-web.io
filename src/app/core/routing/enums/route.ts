@@ -1,7 +1,8 @@
 export enum Route {
+  Config,
+  CreateEmployee,
   Root,
   Employees,
-  CreateEmployee,
   Schedule,
   SignOut,
   SignIn,
