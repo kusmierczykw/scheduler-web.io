@@ -1,5 +1,3 @@
-<div class="aside">
-  <ng-container *ngIf="menu$ | async as items">
-    <app-menu [items]="items"></app-menu>
-  </ng-container>
-</div>
+<ng-container *ngIf="items$ | async as items">
+  <app-aside-menu [items]="items"></app-aside-menu>
+</ng-container>

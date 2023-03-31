@@ -1,9 +1,8 @@
 @use 'variables/sizes';
 
 :host {
-  .main {
-    $padding: sizes.$size-32 sizes.$size-32;
+  $padding: sizes.$size-32 sizes.$size-32;
 
-    padding: $padding;
-  }
+  padding: $padding;
+  display: block;
 }

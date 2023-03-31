@@ -1,11 +1,5 @@
-<div class="menu-item-content">
-  <ng-container *ngIf="item.hasIcon()">
-    <span class="menu-item-content__icon">
-      <app-icon [icon]="item.icon!"></app-icon>
-    </span>
-  </ng-container>
+<ng-container *ngIf="item.hasIcon()">
+  <app-icon [icon]="item.icon!"></app-icon>
+</ng-container>
 
-  <span class="menu-item-content__label">
-    {{ item.label }}
-  </span>
-</div>
+<span>{{ item.label }}</span>

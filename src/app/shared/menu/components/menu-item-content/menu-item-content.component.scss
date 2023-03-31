@@ -1,5 +1,28 @@
-.menu-item-content {
-  &__icon {
-    margin-right: 0.5rem;
+@use 'variables/sizes';
+@use 'variables/colors';
+
+:host {
+  $padding: 0.5rem 1rem;
+  $border-radius: sizes.$size-6;
+
+  padding: $padding;
+  border-radius: $border-radius;
+
+  app-icon {
+    $margin: 0.5rem;
+
+    margin-right: $margin;
   }
+
+  span {
+    text-decoration: none;
+  }
+}
+
+:host-context(.link:hover) {
+  $background: white;
+  $color: colors.$dark;
+
+  background-color: $background;
+  color: $color;
 }

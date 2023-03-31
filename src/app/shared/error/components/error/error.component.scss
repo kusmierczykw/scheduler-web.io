@@ -1,9 +1,9 @@
 @use 'variables/colors';
 
 :host {
-  .error {
-    $text-color: colors.$danger;
+  $text-color: colors.$danger;
 
-    color: $text-color;
-  }
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
 }

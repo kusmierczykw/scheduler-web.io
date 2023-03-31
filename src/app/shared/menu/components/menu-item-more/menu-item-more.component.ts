@@ -6,7 +6,6 @@ import {
   OnInit,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MenuItemContentComponent } from '@shared/menu/components/menu-item-content/menu-item-content.component';
 import { MenuItemComponent } from '@shared/menu/components/menu-item/menu-item.component';
 import { MenuItem } from '@shared/menu/models/menu-item';
 import { Router } from '@angular/router';
@@ -23,7 +22,6 @@ import {
   standalone: true,
   imports: [
     CommonModule,
-    MenuItemContentComponent,
     MenuItemComponent,
     forwardRef(() => MenuItemComponent),
   ],

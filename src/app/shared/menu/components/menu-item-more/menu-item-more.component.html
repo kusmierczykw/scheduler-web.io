@@ -1,5 +1,5 @@
 <button class="link" (click)="handleMoreClick()">
-  <app-menu-item-content [item]="item"></app-menu-item-content>
+  <ng-content></ng-content>
 </button>
 
 <div class="menu-item-more" [@openClose]="expanded ? 'open' : 'close'">

@@ -1,19 +1,29 @@
-<div class="menu-item">
-  <ng-container [ngSwitch]="true">
-    <ng-container *ngSwitchCase="item.isRouterLink()">
-      <app-menu-item-router-link [item]="item"></app-menu-item-router-link>
-    </ng-container>
-
-    <ng-container *ngSwitchCase="item.isLink()">
-      <app-menu-item-link [item]="item"></app-menu-item-link>
-    </ng-container>
-
-    <ng-container *ngSwitchCase="item.isCommand()">
-      <app-menu-item-command [item]="item"></app-menu-item-command>
-    </ng-container>
-
-    <ng-container *ngSwitchCase="item.isMore()">
-      <app-menu-item-more [item]="item"></app-menu-item-more>
-    </ng-container>
+<ng-container [ngSwitch]="true">
+  <ng-container *ngSwitchCase="item.isRouterLink()">
+    <app-menu-item-router-link [item]="item">
+      <ng-container [ngTemplateOutlet]="contentTemplateRef"></ng-container>
+    </app-menu-item-router-link>
   </ng-container>
-</div>
+
+  <ng-container *ngSwitchCase="item.isLink()">
+    <app-menu-item-link [item]="item">
+      <ng-container [ngTemplateOutlet]="contentTemplateRef"></ng-container>
+    </app-menu-item-link>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="item.isCommand()">
+    <app-menu-item-command [item]="item">
+      <ng-container [ngTemplateOutlet]="contentTemplateRef"></ng-container>
+    </app-menu-item-command>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="item.isMore()">
+    <app-menu-item-more [item]="item">
+      <ng-container [ngTemplateOutlet]="contentTemplateRef"></ng-container>
+    </app-menu-item-more>
+  </ng-container>
+</ng-container>
+
+<ng-template #contentTemplateRef>
+  <ng-content></ng-content>
+</ng-template>

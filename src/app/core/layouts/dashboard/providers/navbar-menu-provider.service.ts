@@ -14,7 +14,7 @@ export class NavbarMenuProviderService {
     private readonly toast: ToastService
   ) {}
 
-  menu(): Observable<MenuItem[]> {
+  items(): Observable<MenuItem[]> {
     return of([
       this.builder
         .initCommand(() => {

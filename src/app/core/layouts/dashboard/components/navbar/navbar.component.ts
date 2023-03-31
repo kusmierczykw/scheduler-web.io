@@ -1,29 +1,36 @@
 import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
 import { CommonModule, DOCUMENT } from '@angular/common';
-import { MenuComponent } from '@shared/menu/components/menu/menu.component';
 import { fromEvent, map, Observable, startWith } from 'rxjs';
 import { NavbarMenuProviderService } from '@core/layouts/dashboard/providers/navbar-menu-provider.service';
 import { MenuItem } from '@shared/menu/models/menu-item';
+import { MenuItemComponent } from '@shared/menu/components/menu-item/menu-item.component';
+import { MenuItemContentComponent } from '@shared/menu/components/menu-item-content/menu-item-content.component';
+import { NavbarMenuComponent } from '@core/layouts/dashboard/components/navbar-menu/navbar-menu.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, MenuComponent],
+  imports: [
+    CommonModule,
+    MenuItemComponent,
+    MenuItemContentComponent,
+    NavbarMenuComponent,
+  ],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
-  readonly menu$ = this.menuSource();
+  readonly items$ = this.menuSource();
   readonly isScrolledDown$ = this.isScrolledDownSource();
 
   constructor(
     @Inject(DOCUMENT) private readonly document: Document,
-    private readonly provider: NavbarMenuProviderService
+    private readonly menuProvider: NavbarMenuProviderService
   ) {}
 
   private menuSource(): Observable<MenuItem[]> {
-    return this.provider.menu();
+    return this.menuProvider.items();
   }
 
   private isScrolledDownSource(): Observable<boolean> {

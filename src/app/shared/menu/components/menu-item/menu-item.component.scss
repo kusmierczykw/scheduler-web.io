@@ -1,25 +1,7 @@
-.menu-item {
-  app-menu-item-more,
-  app-menu-item-router-link,
-  app-menu-item-command,
-  app-menu-item-link {
-    display: flex;
-    flex-direction: column;
-  }
-
-  ::ng-deep .link {
-    padding: 0.5rem 0.75rem;
-    border-radius: 1rem;
-    text-decoration: none;
-    color: inherit;
-
-    &.active {
-      color: #3b82f6;
-      font-weight: bold;
-    }
-
-    &:hover {
-      background-color: #f6f9fc;
+:host {
+  ::ng-deep {
+    .link {
+      text-decoration: none;
     }
   }
 }

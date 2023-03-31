@@ -1,16 +1,16 @@
 @use 'variables/sizes';
 
 :host {
-  .aside {
-    $height: calc(100vh - #{sizes.$navbar-height});
-    $font-size: sizes.$aside-font-size;
-    $padding: sizes.$size-16;
+  $height: calc(100vh - #{sizes.$navbar-height});
+  $font-size: sizes.$aside-font-size;
+  $padding: sizes.$size-16;
 
-    height: $height;
-    font-size: $font-size;
-    padding: $padding;
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-  }
+  height: $height;
+  font-size: $font-size;
+  padding: $padding;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
 }

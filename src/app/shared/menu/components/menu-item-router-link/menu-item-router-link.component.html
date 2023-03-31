@@ -3,5 +3,5 @@
   routerLinkActive="active"
   [routerLinkActiveOptions]="{ exact: true }"
   [routerLink]="item.routerLink!">
-  <app-menu-item-content [item]="item"></app-menu-item-content>
+  <ng-content></ng-content>
 </a>

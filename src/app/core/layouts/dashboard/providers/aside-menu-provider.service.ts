@@ -3,6 +3,7 @@ import { MenuItemBuilderService } from '@shared/menu/builders/menu-item-builder.
 import { Observable, of } from 'rxjs';
 import { MenuItem } from '@shared/menu/models/menu-item';
 import { Route } from '@core/routing/enums/route';
+import { Icon } from '@shared/icon/enums/icon';
 
 @Injectable({
   providedIn: 'root',
@@ -10,16 +11,18 @@ import { Route } from '@core/routing/enums/route';
 export class AsideMenuProviderService {
   constructor(private readonly builder: MenuItemBuilderService) {}
 
-  menu(): Observable<MenuItem[]> {
+  items(): Observable<MenuItem[]> {
     return of([
       this.builder
         .initRouterLink(provider => provider.routerLink(Route.Employees))
         .label('Pracownicy')
+        .icon(Icon.PeopleFill)
         .build(),
 
       this.builder
         .initRouterLink(provider => provider.routerLink(Route.Schedule))
         .label('Grafik zajęć')
+        .icon(Icon.PeopleFill)
         .build(),
     ]);
   }
