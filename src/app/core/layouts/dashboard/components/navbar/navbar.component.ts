@@ -41,7 +41,7 @@ export class NavbarComponent {
   }
 
   private isScrolledDown(): boolean {
-    const { defaultView } = document;
+    const { defaultView } = this.document;
 
     if (defaultView) {
       return defaultView.scrollY > 0;

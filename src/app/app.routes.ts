@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
 import { RouteFragment } from '@core/routing/enums/route-fragment';
+import { Route } from '@core/routing/enums/route';
+import { resolveTitleFor } from '@core/routing/utils/resolve-title-for';
 
 export const routes: Routes = [
   {
@@ -11,6 +13,7 @@ export const routes: Routes = [
     children: [
       {
         path: RouteFragment.Schedule,
+        title: resolveTitleFor(Route.Schedule),
         loadComponent: () =>
           import(
             '@features/schedule/pages/schedule-page/schedule-page.component'
@@ -18,6 +21,7 @@ export const routes: Routes = [
       },
       {
         path: RouteFragment.Employees,
+        title: resolveTitleFor(Route.Employees),
         loadComponent: () =>
           import(
             '@features/employee/pages/employees-page/employees-page.component'
@@ -31,6 +35,14 @@ export const routes: Routes = [
               ).then(c => c.CreateEmployeePageComponent),
           },
         ],
+      },
+      {
+        path: RouteFragment.Config,
+        title: resolveTitleFor(Route.Config),
+        loadComponent: () =>
+          import(
+            '@features/config/pages/config-page/config-page.component'
+          ).then(c => c.ConfigPageComponent),
       },
     ],
   },

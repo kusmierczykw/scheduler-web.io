@@ -5,6 +5,7 @@ import { NavbarComponent } from '@core/layouts/dashboard/components/navbar/navba
 import { FooterComponent } from '@core/layouts/dashboard/components/footer/footer.component';
 import { ApplicationLogoComponent } from '@core/layouts/dashboard/components/application-logo/application-logo.component';
 import { MainComponent } from '@core/layouts/dashboard/components/main/main.component';
+import { PageTitleComponent } from '@core/layouts/dashboard/components/page-title/page-title.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,6 +17,7 @@ import { MainComponent } from '@core/layouts/dashboard/components/main/main.comp
     FooterComponent,
     ApplicationLogoComponent,
     MainComponent,
+    PageTitleComponent,
   ],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],

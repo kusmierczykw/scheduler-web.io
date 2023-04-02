@@ -1,0 +1,6 @@
+@use 'variables/sizes';
+
+@mixin glass($background: null, $blur: sizes.$size-4) {
+  background: $background;
+  backdrop-filter: blur($blur);
+}

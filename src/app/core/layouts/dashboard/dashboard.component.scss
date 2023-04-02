@@ -35,11 +35,19 @@
 
   main {
     $main-min-height: 100vh;
+    $padding: sizes.$size-16 sizes.$size-32 sizes.$size-32;
 
     min-height: $main-min-height;
+    padding: $padding;
     grid-area: main;
     grid-column: 2/3;
     overflow: hidden;
+
+    app-page-title {
+      $margin: sizes.$size-16;
+
+      margin-bottom: $margin;
+    }
   }
 
   footer {

@@ -7,8 +7,8 @@ import { RouterLinkWithParams } from '@core/routing/types/router-link-with-param
 import { RouteFragment } from '@core/routing/enums/route-fragment';
 import { RouterLinkParams } from '@core/routing/types/router-link-params';
 import { isRouteParam } from '@core/routing/utils/is-route-param';
-import { RouteParamsNotFound } from '@core/routing/exceptions/route-params-not-found';
-import { RouteParamNotFound } from '@core/routing/exceptions/route-param-not-found';
+import { RouteParamsNotFoundExceptions } from '@core/routing/exceptions/route-params-not-found.exceptions';
+import { RouteParamNotFoundException } from '@core/routing/exceptions/route-param-not-found.exception';
 
 @Injectable({
   providedIn: 'root',
@@ -49,13 +49,13 @@ export class RouterLinkProviderService {
     return routerLinkWithParams.map(fragmentOrParam => {
       if (isRouteParam(fragmentOrParam)) {
         if (isNil(params)) {
-          throw new RouteParamsNotFound();
+          throw new RouteParamsNotFoundExceptions();
         }
 
         const param = params[fragmentOrParam];
 
         if (isNil(param)) {
-          throw new RouteParamNotFound(fragmentOrParam);
+          throw new RouteParamNotFoundException(fragmentOrParam);
         }
 
         return param;
