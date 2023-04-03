@@ -5,7 +5,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class PageTitleService {
+export class TitleService {
   private readonly titleSource$ = new BehaviorSubject(this.appTitle.getTitle());
 
   constructor(private readonly appTitle: AppTitle) {}

@@ -10,6 +10,7 @@ import { RouteTitleNotFoundException } from '@core/routing/exceptions/route-titl
 export class RouteTitleProviderService {
   private readonly entries = new Map<Route, string>([
     [Route.Employees, 'Pracownicy'],
+    [Route.CreateEmployee, 'Utwórz pracownika'],
     [Route.Config, 'Konfiguracja'],
     [Route.Schedule, 'Harmonogram'],
   ]);

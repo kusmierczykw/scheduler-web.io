@@ -42,12 +42,6 @@
     grid-area: main;
     grid-column: 2/3;
     overflow: hidden;
-
-    app-page-title {
-      $margin: sizes.$size-16;
-
-      margin-bottom: $margin;
-    }
   }
 
   footer {

@@ -6,6 +6,7 @@ import { FooterComponent } from '@core/layouts/dashboard/components/footer/foote
 import { ApplicationLogoComponent } from '@core/layouts/dashboard/components/application-logo/application-logo.component';
 import { MainComponent } from '@core/layouts/dashboard/components/main/main.component';
 import { PageTitleComponent } from '@core/layouts/dashboard/components/page-title/page-title.component';
+import { BreadcrumbsComponent } from '@core/layouts/dashboard/components/breadcrumbs/breadcrumbs.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -18,6 +19,7 @@ import { PageTitleComponent } from '@core/layouts/dashboard/components/page-titl
     ApplicationLogoComponent,
     MainComponent,
     PageTitleComponent,
+    BreadcrumbsComponent,
   ],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],

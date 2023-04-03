@@ -6,6 +6,7 @@ import { resolveTitleFor } from '@core/routing/utils/resolve-title-for';
 export const routes: Routes = [
   {
     path: '',
+    title: 'Pulpit',
     loadComponent: () =>
       import('@core/layouts/dashboard/dashboard.component').then(
         c => c.DashboardComponent
@@ -29,6 +30,7 @@ export const routes: Routes = [
         children: [
           {
             path: RouteFragment.Create,
+            title: resolveTitleFor(Route.CreateEmployee),
             loadComponent: () =>
               import(
                 '@features/employee/pages/create-employee-page/create-employee-page.component'
