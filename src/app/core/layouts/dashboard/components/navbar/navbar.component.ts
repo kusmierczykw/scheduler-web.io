@@ -5,7 +5,7 @@ import { NavbarMenuProviderService } from '@core/layouts/dashboard/providers/nav
 import { MenuItem } from '@shared/menu/models/menu-item';
 import { MenuItemComponent } from '@shared/menu/components/menu-item/menu-item.component';
 import { MenuItemContentComponent } from '@shared/menu/components/menu-item-content/menu-item-content.component';
-import { NavbarMenuComponent } from '@core/layouts/dashboard/fragments/navbar-menu/navbar-menu.component';
+import { NavbarMenuComponent } from '@core/layouts/dashboard/components/navbar-menu/navbar-menu.component';
 
 @Component({
   selector: 'app-navbar',

@@ -48,16 +48,13 @@ export class CreateEmployeeFormComponent {
   @Output() submitClickEvent = new EventEmitter<CreateEmployeeFormData>();
   @Output() cancelClickEvent = new EventEmitter<void>();
 
-  form: FormGroup<CreateEmployeeForm>;
-  therapistTypes$: Observable<SelectItem<EmployeeType>[]>;
+  readonly form = this.createForm();
+  readonly therapistTypes$ = this.therapistTypesSource();
 
   constructor(
     private readonly builder: NonNullableFormBuilder,
     private readonly provider: EmployeeTypeProviderService
-  ) {
-    this.therapistTypes$ = this.therapistTypesSource();
-    this.form = this.createForm();
-  }
+  ) {}
 
   handleSubmitClick(): void {
     this.submitClickEvent.emit(this.toModel());

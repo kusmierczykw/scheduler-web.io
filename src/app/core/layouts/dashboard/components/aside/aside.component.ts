@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { AsideMenuProviderService } from '@core/layouts/dashboard/providers/aside-menu-provider.service';
 import { Observable } from 'rxjs';
 import { MenuItem } from '@shared/menu/models/menu-item';
-import { AsideMenuItemContentComponent } from '@core/layouts/dashboard/fragments/aside-menu-item-content/aside-menu-item-content.component';
+import { AsideMenuItemContentComponent } from '@core/layouts/dashboard/components/aside-menu-item-content/aside-menu-item-content.component';
 import { MenuItemComponent } from '@shared/menu/components/menu-item/menu-item.component';
 import { OnlyVisibleMenuItemsPipe } from '@shared/menu/pipes/only-visible-menu-items.pipe';
-import { AsideMenuComponent } from '@core/layouts/dashboard/fragments/aside-menu/aside-menu.component';
+import { AsideMenuComponent } from '@core/layouts/dashboard/components/aside-menu/aside-menu.component';
 
 @Component({
   selector: 'app-aside',
