@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-main',
+  selector: 'app-content',
   standalone: true,
   imports: [CommonModule, RouterOutlet],
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss'],
+  templateUrl: './content.component.html',
+  styleUrls: ['./content.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MainComponent {}
+export class ContentComponent {}

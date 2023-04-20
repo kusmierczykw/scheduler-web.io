@@ -9,42 +9,44 @@
     'aside main'
     'aside footer';
 
-  header {
-    $height: sizes.$navbar-height;
+  .dashboard {
+    &__header {
+      $height: sizes.$navbar-height;
 
-    height: $height;
-    grid-area: header;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
+      height: $height;
+      grid-area: header;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-  aside {
-    $aside-height: 100vh;
-    $aside-width: 6rem;
+    &__aside {
+      $aside-height: 100vh;
+      $aside-width: 6rem;
 
-    width: $aside-width;
-    height: $aside-height;
-    grid-area: aside;
-    position: sticky;
-    top: 0;
-    grid-column: 1/2;
-    background-color: white;
-    color: #495057;
-  }
+      width: $aside-width;
+      height: $aside-height;
+      grid-area: aside;
+      position: sticky;
+      top: 0;
+      grid-column: 1/2;
+      background-color: white;
+      color: #495057;
+    }
 
-  main {
-    $main-min-height: 100vh;
-    $padding: sizes.$size-16 sizes.$size-32 sizes.$size-32;
+    &__main {
+      $main-min-height: 100vh;
+      $padding: sizes.$size-16 sizes.$size-32 sizes.$size-32;
 
-    min-height: $main-min-height;
-    padding: $padding;
-    grid-area: main;
-    grid-column: 2/3;
-    overflow: hidden;
-  }
+      min-height: $main-min-height;
+      padding: $padding;
+      grid-area: main;
+      grid-column: 2/3;
+      overflow: hidden;
+    }
 
-  footer {
-    grid-area: footer;
+    &__footer {
+      grid-area: footer;
+    }
   }
 }

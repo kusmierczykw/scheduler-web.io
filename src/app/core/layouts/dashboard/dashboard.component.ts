@@ -4,7 +4,7 @@ import { AsideComponent } from '@core/layouts/dashboard/components/aside/aside.c
 import { NavbarComponent } from '@core/layouts/dashboard/components/navbar/navbar.component';
 import { FooterComponent } from '@core/layouts/dashboard/components/footer/footer.component';
 import { ApplicationLogoComponent } from '@core/layouts/dashboard/components/application-logo/application-logo.component';
-import { MainComponent } from '@core/layouts/dashboard/components/main/main.component';
+import { ContentComponent } from '@core/layouts/dashboard/components/content/content.component';
 import { PageTitleComponent } from '@core/layouts/dashboard/components/page-title/page-title.component';
 import { BreadcrumbsComponent } from '@core/layouts/dashboard/components/breadcrumbs/breadcrumbs.component';
 
@@ -17,7 +17,7 @@ import { BreadcrumbsComponent } from '@core/layouts/dashboard/components/breadcr
     NavbarComponent,
     FooterComponent,
     ApplicationLogoComponent,
-    MainComponent,
+    ContentComponent,
     PageTitleComponent,
     BreadcrumbsComponent,
   ],

@@ -1,5 +1,5 @@
-@use 'variables/colors';
-@use 'variables/sizes';
+@use 'colors';
+@use 'sizes';
 
 :host {
   $border-radius: sizes.$size-6;
