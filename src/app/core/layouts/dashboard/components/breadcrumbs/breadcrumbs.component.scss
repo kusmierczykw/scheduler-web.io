@@ -1,4 +1,8 @@
 :host {
-  display: flex;
-  font-size: 0.925rem;
+  ::ng-deep {
+    $font-size: 0.825rem;
+
+    font-size: $font-size;
+    display: flex;
+  }
 }

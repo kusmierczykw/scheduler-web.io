@@ -1,10 +1,9 @@
 <ng-container *ngIf="breadcrumbs$ | async as breadcrumbs">
   <ng-container *ngFor="let breadcrumb of breadcrumbs; let isLast = last">
-    <app-breadcrumb [breadcrumb]="breadcrumb" [isLast]="isLast">
-    </app-breadcrumb>
+    <app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
 
     <ng-container *ngIf="!isLast">
-      <app-breadcrumb-divider> / </app-breadcrumb-divider>
+      <app-breadcrumb-divider>/</app-breadcrumb-divider>
     </ng-container>
   </ng-container>
 </ng-container>

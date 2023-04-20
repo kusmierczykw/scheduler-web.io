@@ -13,5 +13,4 @@ import { RouterLink } from '@angular/router';
 })
 export class BreadcrumbComponent {
   @Input() breadcrumb!: Breadcrumb;
-  @Input() isLast!: boolean;
 }

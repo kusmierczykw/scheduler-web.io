@@ -8,11 +8,11 @@ import { TitleService } from '@core/services/title.service';
   selector: 'app-page-title',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './page-title.component.html',
-  styleUrls: ['./page-title.component.scss'],
+  templateUrl: './title.component.html',
+  styleUrls: ['./title.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PageTitleComponent {
+export class TitleComponent {
   readonly title$ = this.titleSource();
 
   constructor(private readonly pageTitle: TitleService) {}

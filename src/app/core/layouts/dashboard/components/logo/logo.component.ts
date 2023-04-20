@@ -7,14 +7,14 @@ import { Route } from '@core/routing/enums/route';
 import { RouterLinkPipe } from '@core/routing/pipes/router-link.pipe';
 
 @Component({
-  selector: 'app-application-logo',
+  selector: 'app-logo',
   standalone: true,
   imports: [CommonModule, ImageComponent, RouterLink, RouterLinkPipe],
-  templateUrl: './application-logo.component.html',
-  styleUrls: ['./application-logo.component.scss'],
+  templateUrl: './logo.component.html',
+  styleUrls: ['./logo.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ApplicationLogoComponent {
+export class LogoComponent {
   readonly Image = Image;
   readonly Route = Route;
 }

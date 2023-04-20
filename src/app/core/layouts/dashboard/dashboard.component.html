@@ -3,14 +3,17 @@
 </header>
 
 <aside class="dashboard__aside">
-  <app-application-logo></app-application-logo>
+  <app-logo></app-logo>
   <app-aside></app-aside>
 </aside>
 
-<main class="dashboard__main">
-  <app-page-title></app-page-title>
-  <app-breadcrumbs></app-breadcrumbs>
-  <app-content></app-content>
+<main class="dashboard__page">
+  <section class="dashboard__page-info">
+    <app-page-title></app-page-title>
+    <app-breadcrumbs></app-breadcrumbs>
+  </section>
+
+  <router-outlet></router-outlet>
 </main>
 
 <footer class="dashboard__footer">

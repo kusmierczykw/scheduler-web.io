@@ -34,7 +34,7 @@
       color: #495057;
     }
 
-    &__main {
+    &__page {
       $main-min-height: 100vh;
       $padding: sizes.$size-16 sizes.$size-32 sizes.$size-32;
 
@@ -43,6 +43,12 @@
       grid-area: main;
       grid-column: 2/3;
       overflow: hidden;
+    }
+
+    &__page-info {
+      $margin: 1rem;
+
+      margin-bottom: $margin;
     }
 
     &__footer {
