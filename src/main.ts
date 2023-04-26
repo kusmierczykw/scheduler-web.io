@@ -1,24 +1,39 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
-import { importProvidersFrom } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
-import { RouterModule, TitleStrategy } from '@angular/router';
+import {
+  provideRouter,
+  TitleStrategy,
+  withInMemoryScrolling,
+} from '@angular/router';
 import { routes } from './app/app.routes';
+import { Provider } from '@angular/core';
 import { CustomTitleStrategy } from '@core/routing/strategies/custom-title-strategy';
 
-bootstrapApplication(AppComponent, {
-  providers: [
-    importProvidersFrom(
-      HttpClientModule,
-      RouterModule.forRoot(routes, {
-        scrollPositionRestoration: 'enabled',
-      })
-    ),
-    provideAnimations(),
+const provideRouterConfig = () => {
+  return provideRouter(
+    routes,
+    withInMemoryScrolling({
+      scrollPositionRestoration: 'enabled',
+    })
+  );
+};
+
+const provideCustomTitleStrategy = (): Provider[] => {
+  return [
     {
       provide: TitleStrategy,
       useClass: CustomTitleStrategy,
     },
+  ];
+};
+
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouterConfig(),
+    provideHttpClient(),
+    provideAnimations(),
+    provideCustomTitleStrategy(),
   ],
 }).catch(console.error);

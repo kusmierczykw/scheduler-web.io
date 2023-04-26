@@ -4,6 +4,7 @@ export enum Route {
   Root,
   Employees,
   Schedule,
+  Dashboard,
   SignOut,
   SignIn,
 }

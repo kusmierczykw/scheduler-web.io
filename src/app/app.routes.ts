@@ -6,7 +6,7 @@ import { resolveTitleFor } from '@core/routing/utils/resolve-title-for';
 export const routes: Routes = [
   {
     path: '',
-    title: 'Pulpit',
+    title: resolveTitleFor(Route.Dashboard),
     loadComponent: () =>
       import('@core/layouts/dashboard/dashboard.component').then(
         c => c.DashboardComponent

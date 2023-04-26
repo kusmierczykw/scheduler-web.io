@@ -1,4 +1,3 @@
-import { RouteParam } from '@core/routing/enums/route-param';
-import { RouteFragment } from '@core/routing/enums/route-fragment';
+import { RouterFragmentOrParam } from '@core/routing/types/router-fragment-or-param';
 
-export type RouterLinkWithParams = Array<RouteFragment | RouteParam>;
+export type RouterLinkWithParams = Array<RouterFragmentOrParam>;

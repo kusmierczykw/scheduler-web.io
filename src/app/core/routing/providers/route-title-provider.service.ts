@@ -11,6 +11,7 @@ export class RouteTitleProviderService {
   private readonly entries = new Map<Route, string>([
     [Route.Employees, 'Pracownicy'],
     [Route.CreateEmployee, 'Utwórz pracownika'],
+    [Route.Dashboard, 'Pulpit'],
     [Route.Config, 'Konfiguracja'],
     [Route.Schedule, 'Harmonogram'],
   ]);

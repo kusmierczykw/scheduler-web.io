@@ -24,9 +24,9 @@ export class CustomTitleStrategy extends TitleStrategy {
 
   override updateTitle(snapshot: RouterStateSnapshot): void {
     const title = this.buildTitle(snapshot);
-    const breadcrumbs = this.createBreadcrumbs(snapshot);
+    const breadcrumbs = this.buildBreadcrumbs(snapshot);
 
-    this.updateBreadcrumb(breadcrumbs);
+    this.updateBreadcrumbs(breadcrumbs);
 
     if (isNil(title)) {
       return;
@@ -39,7 +39,7 @@ export class CustomTitleStrategy extends TitleStrategy {
     this.pageTitle.setTitle(title);
   }
 
-  private createBreadcrumbs(snapshot: RouterStateSnapshot): Breadcrumb[] {
+  private buildBreadcrumbs(snapshot: RouterStateSnapshot): Breadcrumb[] {
     let route: Nillable<ActivatedRouteSnapshot> = snapshot.root;
     let label = undefined;
     const routerLink: RouterLink = ['/'];
@@ -64,7 +64,7 @@ export class CustomTitleStrategy extends TitleStrategy {
     return breadcrumbs;
   }
 
-  private updateBreadcrumb(breadcrumbs: Breadcrumb[]): void {
+  private updateBreadcrumbs(breadcrumbs: Breadcrumb[]): void {
     this.breadcrumb.setBreadcrumbs(breadcrumbs);
   }
 }

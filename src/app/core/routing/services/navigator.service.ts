@@ -8,13 +8,13 @@ import { Router } from '@angular/router';
 })
 export class NavigatorService {
   constructor(
-    private readonly routerLinkProvider: RouterLinkProviderService,
+    private readonly provider: RouterLinkProviderService,
     private readonly router: Router
   ) {}
 
   navigateByRouterLink(
     routerLink: (provider: RouterLinkProviderService) => RouterLink
   ): void {
-    void this.router.navigate(routerLink(this.routerLinkProvider));
+    void this.router.navigate(routerLink(this.provider));
   }
 }
