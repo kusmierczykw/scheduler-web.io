@@ -5,10 +5,10 @@ import {
   RouterStateSnapshot,
   TitleStrategy,
 } from '@angular/router';
-import { TitleService } from '@core/routing/services/title.service';
+import { TitleService } from '@core/routing/titles/services/title.service';
 import { Nillable } from '@core/utils/nil/nillable';
-import { BreadcrumbService } from '@core/routing/services/breadcrumb.service';
-import { RouterLink } from '@core/routing/types/router-link';
+import { BreadcrumbService } from '@core/routing/breadcrumbs/services/breadcrumb.service';
+import { RouterLink } from '@core/routing/routes/types/router-link';
 import { Breadcrumb } from '@shared/breadcrumbs/models/breadcrumb';
 import { isNil } from '@core/utils/nil/is-nil';
 

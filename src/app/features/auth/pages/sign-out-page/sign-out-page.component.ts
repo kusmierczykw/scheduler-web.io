@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavigatorService } from '@core/routing/services/navigator.service';
-import { Route } from '@core/routing/enums/route';
+import { NavigatorService } from '@core/routing/routes/services/navigator.service';
+import { Route } from '@core/routing/routes/enums/route';
 
 @Component({
   selector: 'app-sign-out-page',

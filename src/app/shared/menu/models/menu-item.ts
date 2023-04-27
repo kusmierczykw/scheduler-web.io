@@ -1,5 +1,5 @@
 import { MenuItemType } from '@shared/menu/enums/menu-item-type';
-import { RouterLink } from '@core/routing/types/router-link';
+import { RouterLink } from '@core/routing/routes/types/router-link';
 import { Nillable } from '@core/utils/nil/nillable';
 import { Icon } from '@shared/icon/enums/icon';
 import { Observable } from 'rxjs';

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BreadcrumbService } from '@core/routing/services/breadcrumb.service';
+import { BreadcrumbService } from '@core/routing/breadcrumbs/services/breadcrumb.service';
 import { Observable } from 'rxjs';
 import { Breadcrumb } from '@shared/breadcrumbs/models/breadcrumb';
 import { BreadcrumbComponent } from '@shared/breadcrumbs/components/breadcrumb/breadcrumb.component';

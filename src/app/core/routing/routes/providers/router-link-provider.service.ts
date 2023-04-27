@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Route } from '@core/routing/enums/route';
-import { RouterLink } from '@core/routing/types/router-link';
+import { Route } from '@core/routing/routes/enums/route';
+import { RouterLink } from '@core/routing/routes/types/router-link';
 import { Nillable } from '@core/utils/nil/nillable';
-import { RouteEntryNotFoundException } from '@core/routing/exceptions/route-entry-not-found.exception';
-import { RouterLinkWithParams } from '@core/routing/types/router-link-with-params';
-import { RouteFragment } from '@core/routing/enums/route-fragment';
-import { RouterLinkParams } from '@core/routing/types/router-link-params';
-import { RouteParamsNotFoundExceptions } from '@core/routing/exceptions/route-params-not-found.exceptions';
-import { RouteParamNotFoundException } from '@core/routing/exceptions/route-param-not-found.exception';
-import { RouteParam } from '@core/routing/enums/route-param';
-import { RouterFragmentOrParam } from '@core/routing/types/router-fragment-or-param';
+import { RouteEntryNotFoundException } from '@core/routing/routes/exceptions/route-entry-not-found.exception';
+import { RouterLinkWithParams } from '@core/routing/routes/types/router-link-with-params';
+import { RouteFragment } from '@core/routing/routes/enums/route-fragment';
+import { RouterLinkParams } from '@core/routing/routes/types/router-link-params';
+import { RouteParamsNotFoundExceptions } from '@core/routing/routes/exceptions/route-params-not-found.exceptions';
+import { RouteParamNotFoundException } from '@core/routing/routes/exceptions/route-param-not-found.exception';
+import { RouteParam } from '@core/routing/routes/enums/route-param';
+import { RouterFragmentOrParam } from '@core/routing/routes/types/router-fragment-or-param';
 import { isNil } from '@core/utils/nil/is-nil';
 
 @Injectable({

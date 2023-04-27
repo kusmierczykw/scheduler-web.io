@@ -3,7 +3,7 @@ import { Observable, of } from 'rxjs';
 import { MenuItem } from '@shared/menu/models/menu-item';
 import { MenuItemBuilderService } from '@shared/menu/builders/menu-item-builder.service';
 import { ToastService } from '@shared/toast/services/toast.service';
-import { Route } from '@core/routing/enums/route';
+import { Route } from '@core/routing/routes/enums/route';
 
 @Injectable({
   providedIn: 'root',

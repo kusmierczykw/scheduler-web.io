@@ -9,8 +9,8 @@ import { DialogModule } from 'primeng/dialog';
 import { BottomSheetDialogDirective } from '@shared/dialog/directives/bottom-sheet-dialog.directive';
 import { CustomCloseEventDirective } from '@shared/dialog/directives/custom-close-event.directive';
 import { ConfirmationService } from '@shared/confirmation/services/confirmation.service';
-import { NavigatorService } from '@core/routing/services/navigator.service';
-import { Route } from '@core/routing/enums/route';
+import { NavigatorService } from '@core/routing/routes/services/navigator.service';
+import { Route } from '@core/routing/routes/enums/route';
 
 @Component({
   selector: 'app-create-employee-page',

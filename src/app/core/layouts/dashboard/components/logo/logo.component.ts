@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ImageComponent } from '@shared/image/components/image/image.component';
 import { Image } from '@shared/image/enums/image';
 import { RouterLink } from '@angular/router';
-import { Route } from '@core/routing/enums/route';
-import { RouterLinkPipe } from '@core/routing/pipes/router-link.pipe';
+import { Route } from '@core/routing/routes/enums/route';
+import { RouterLinkPipe } from '@core/routing/routes/pipes/router-link.pipe';
 
 @Component({
   selector: 'app-logo',

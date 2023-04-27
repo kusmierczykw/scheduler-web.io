@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { RouteFragment } from '@core/routing/enums/route-fragment';
-import { Route } from '@core/routing/enums/route';
-import { resolveTitleFor } from '@core/routing/utils/resolve-title-for';
+import { RouteFragment } from '@core/routing/routes/enums/route-fragment';
+import { Route } from '@core/routing/routes/enums/route';
+import { resolveTitleFor } from '@core/routing/titles/resolve-title-for';
 
 export const routes: Routes = [
   {
