@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Image } from '@shared/image/enums/image';
-import { isNil } from '@core/utils/nil/nillable';
 import { ImageEntryNotFoundException } from '@shared/image/exceptions/image-entry-not-found.exception';
+import { isNil } from '@core/utils/nil/is-nil';
 
 @Injectable({
   providedIn: 'root',

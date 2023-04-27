@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Toast } from '@shared/toast/models/toast';
-import { isNil, Nillable } from '@core/utils/nil/nillable';
+import { Nillable } from '@core/utils/nil/nillable';
 import { ToastSeverity } from '@shared/toast/types/toast-severity';
 import { RequireMethodCallException } from '@shared/common/exceptions/require-method-call.exception';
+import { isNil } from '@core/utils/nil/is-nil';
 
 @Injectable({
   providedIn: 'root',

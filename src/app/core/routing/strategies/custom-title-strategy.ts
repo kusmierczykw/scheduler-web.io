@@ -5,11 +5,12 @@ import {
   RouterStateSnapshot,
   TitleStrategy,
 } from '@angular/router';
-import { TitleService } from '@core/services/title.service';
-import { isNil, Nillable } from '@core/utils/nil/nillable';
-import { BreadcrumbService } from '@core/services/breadcrumb.service';
+import { TitleService } from '@core/routing/services/title.service';
+import { Nillable } from '@core/utils/nil/nillable';
+import { BreadcrumbService } from '@core/routing/services/breadcrumb.service';
 import { RouterLink } from '@core/routing/types/router-link';
 import { Breadcrumb } from '@shared/breadcrumbs/models/breadcrumb';
+import { isNil } from '@core/utils/nil/is-nil';
 
 @Injectable({
   providedIn: 'root',

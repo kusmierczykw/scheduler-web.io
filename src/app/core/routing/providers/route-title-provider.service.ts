@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Route } from '@core/routing/enums/route';
 import { Observable, of } from 'rxjs';
-import { isNil } from '@core/utils/nil/nillable';
 import { RouteTitleNotFoundException } from '@core/routing/exceptions/route-title-not-found.exception';
+import { isNil } from '@core/utils/nil/is-nil';
 
 @Injectable({
   providedIn: 'root',

@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { isNil, Nillable } from '@core/utils/nil/nillable';
+import { Nillable } from '@core/utils/nil/nillable';
 import { Confirmation } from '@shared/confirmation/models/confirmation';
 import { EmptyFunction } from '@core/utils/function/empty-function';
 import { RequireMethodCallException } from '@shared/common/exceptions/require-method-call.exception';
+import { isNil } from '@core/utils/nil/is-nil';
 
 @Injectable({
   providedIn: 'root',

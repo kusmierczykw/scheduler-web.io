@@ -1,6 +1,7 @@
 import { Directive, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Dialog } from 'primeng/dialog';
-import { isNil, Nillable } from '@core/utils/nil/nillable';
+import { Nillable } from '@core/utils/nil/nillable';
+import { isNil } from '@core/utils/nil/is-nil';
 
 @Directive({
   selector: '[appCustomCloseEvent]',

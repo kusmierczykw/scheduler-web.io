@@ -1,9 +1,10 @@
 import { MenuItemType } from '@shared/menu/enums/menu-item-type';
 import { RouterLink } from '@core/routing/types/router-link';
-import { isNil, Nillable } from '@core/utils/nil/nillable';
+import { Nillable } from '@core/utils/nil/nillable';
 import { Icon } from '@shared/icon/enums/icon';
 import { Observable } from 'rxjs';
 import { MenuItemCommand } from '@shared/menu/types/menu-item-command';
+import { isNil } from '@core/utils/nil/is-nil';
 
 export class MenuItem {
   constructor(

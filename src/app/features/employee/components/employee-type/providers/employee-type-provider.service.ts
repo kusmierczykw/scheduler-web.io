@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { EmployeeType } from '@features/employee/components/employee-type/enums/employee-type';
 import { SelectItem } from '@shared/select-item/select-item';
-import { isNil } from '@core/utils/nil/nillable';
 import { EmployeeTypeNotFoundException } from '@features/employee/components/employee-type/exceptions/employee-type-not-found.exception';
+import { isNil } from '@core/utils/nil/is-nil';
 
 @Injectable({
   providedIn: 'root',

@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Message } from 'primeng/api';
 import { Toast } from '@shared/toast/models/toast';
 import { ToastSeverity } from '@shared/toast/types/toast-severity';
-import { isNil } from '@core/utils/nil/nillable';
 import { SeverityEntryNotFoundException } from '@shared/toast/exceptions/severity-entry-not-found.exception';
+import { isNil } from '@core/utils/nil/is-nil';
 
 type Severity = 'success' | 'warn' | 'danger' | 'info';
 

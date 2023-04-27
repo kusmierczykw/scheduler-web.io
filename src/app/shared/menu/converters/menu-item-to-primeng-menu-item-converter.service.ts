@@ -3,8 +3,9 @@ import { MenuItem as PrimengMenuItem } from 'primeng/api';
 import { MenuItem } from '@shared/menu/models/menu-item';
 import { valueOrUndefined } from '@core/utils/value-or-undefined';
 import { IconProviderService } from '@shared/icon/providers/icon-provider.service';
-import { isNil, Nillable } from '@core/utils/nil/nillable';
+import { Nillable } from '@core/utils/nil/nillable';
 import { Icon } from '@shared/icon/enums/icon';
+import { isNil } from '@core/utils/nil/is-nil';
 
 @Injectable({
   providedIn: 'root',

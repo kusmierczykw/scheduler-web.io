@@ -17,7 +17,8 @@ import { CalendarOption } from '@fullcalendar/angular/private-types';
 import { CreateEventDialogComponent } from '@features/schedule/components/create-event-dialog/create-event-dialog.component';
 import { CreateEventDialogService } from '@features/schedule/components/create-event-dialog/services/create-event-dialog.service';
 import { CreateEventDialogInput } from '@features/schedule/components/create-event-dialog/models/create-event-dialog-input';
-import { isNil } from '@core/utils/nil/nillable';
+
+import { isNil } from '@core/utils/nil/is-nil';
 
 @Component({
   selector: 'app-calendar',

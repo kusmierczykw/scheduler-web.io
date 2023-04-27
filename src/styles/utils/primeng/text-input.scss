@@ -1,0 +1,6 @@
+@use 'variables/sizes';
+
+@mixin content($font-size: sizes.$input-font-size) {
+  font-size: $font-size;
+  line-height: 1;
+}

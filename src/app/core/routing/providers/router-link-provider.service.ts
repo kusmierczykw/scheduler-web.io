@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Route } from '@core/routing/enums/route';
 import { RouterLink } from '@core/routing/types/router-link';
-import { isNil, Nillable } from '@core/utils/nil/nillable';
+import { Nillable } from '@core/utils/nil/nillable';
 import { RouteEntryNotFoundException } from '@core/routing/exceptions/route-entry-not-found.exception';
 import { RouterLinkWithParams } from '@core/routing/types/router-link-with-params';
 import { RouteFragment } from '@core/routing/enums/route-fragment';
@@ -10,6 +10,7 @@ import { RouteParamsNotFoundExceptions } from '@core/routing/exceptions/route-pa
 import { RouteParamNotFoundException } from '@core/routing/exceptions/route-param-not-found.exception';
 import { RouteParam } from '@core/routing/enums/route-param';
 import { RouterFragmentOrParam } from '@core/routing/types/router-fragment-or-param';
+import { isNil } from '@core/utils/nil/is-nil';
 
 @Injectable({
   providedIn: 'root',

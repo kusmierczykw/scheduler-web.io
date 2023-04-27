@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { MenuItem } from '@shared/menu/models/menu-item';
 import { MenuItemType } from '@shared/menu/enums/menu-item-type';
-import { isNil, Nillable } from '@core/utils/nil/nillable';
+import { Nillable } from '@core/utils/nil/nillable';
 import { RequireMethodCallException } from '@shared/common/exceptions/require-method-call.exception';
 import { RouterLink } from '@core/routing/types/router-link';
 import { RouterLinkProviderService } from '@core/routing/providers/router-link-provider.service';
 import { Icon } from '@shared/icon/enums/icon';
 import { Observable, of } from 'rxjs';
 import { MenuItemCommand } from '@shared/menu/types/menu-item-command';
+import { isNil } from '@core/utils/nil/is-nil';
 
 @Injectable({
   providedIn: 'root',

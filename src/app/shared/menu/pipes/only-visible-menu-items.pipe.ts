@@ -1,8 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { combineLatest, map, Observable, of, switchMap } from 'rxjs';
 import { MenuItem } from '@shared/menu/models/menu-item';
-import { isNil, Nillable } from '@core/utils/nil/nillable';
+import { Nillable } from '@core/utils/nil/nillable';
 import { MenuItemBuilderService } from '@shared/menu/builders/menu-item-builder.service';
+import { isNil } from '@core/utils/nil/is-nil';
 
 @Pipe({
   name: 'onlyVisibleMenuItems',

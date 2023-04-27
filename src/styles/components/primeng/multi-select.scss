@@ -1,5 +1,7 @@
+@use 'utils/primeng/multi-select';
+
 .p-multiselect {
   .p-multiselect-label {
-    font-size: 0.825rem;
+    @include multi-select.label;
   }
 }

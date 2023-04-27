@@ -1,6 +1,3 @@
-type Nil = null | undefined;
-export type Nillable<Type> = Type | Nil;
+import { Nil } from '@core/utils/nil/nil';
 
-export function isNil<Type>(predictable: Nillable<Type>): predictable is Nil {
-  return predictable === undefined || predictable === null;
-}
+export type Nillable<Type> = Type | Nil;

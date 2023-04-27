@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { ValidationError } from '@shared/form/enums/validation-error';
-import { isNil, Nillable } from '@core/utils/nil/nillable';
+import { Nillable } from '@core/utils/nil/nillable';
 import { ControlErrorMessageEntryNotFoundException } from '@shared/form/exceptions/control-error-message-entry-not-found.exception';
 import { ValidationErrorParams } from '@shared/form/types/validation-error-params';
+import { isNil } from '@core/utils/nil/is-nil';
 
 @Injectable({
   providedIn: 'root',

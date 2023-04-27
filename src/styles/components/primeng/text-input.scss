@@ -1,5 +1,5 @@
-.p-inputtext {
-  $font-size: 0.825rem;
+@use 'utils/primeng/text-input';
 
-  font-size: $font-size;
+.p-inputtext {
+  @include text-input.content();
 }
